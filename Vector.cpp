@@ -153,7 +153,7 @@ Vector Vector::resta(Vector varg){
 }
  
 Vector Vector::producto(Vector varg){
-  Vector resultado;
+  Vector resultado(size);
   Fraccion f1, f2, f1_2, f3, f4, f3_4, f5, f6, f5_6, a(-1,1);
   if(size == varg.getSize() && size == 3){
     f1 = arr[1].multiplicacion(varg.getFraccion(2));
@@ -174,6 +174,7 @@ Vector Vector::producto(Vector varg){
 
   }else{
 	  cout <<  "Los vectores exceden las dimensiones permitidas o tienen diferentes dimensiones. " << endl;
+    return Vector();
   }
   return resultado;
 }
@@ -207,8 +208,20 @@ float Vector::magnitud(){
 
   return magnitud;
 }
-
+/*
 Vector Vector::angulo(Vector obj){
-  Vector resultado;
+  Vector resultado, pp;
+  float m_a, m_b, pp_num, pp_den, punto, ang;
+  pp = arr[]*obj;
+  pp_num = pp.getFraccion(0).getNumerador();
+  pp_den = pp.getFraccion(0).getDenominador();
+  punto = pp_num / pp_den;
+  m_a = arr[].magnitud();
+  m_b = obj.magnitud();
+
+  ang = cos(punto / m_a * m_b);
+  Fraccion f(ang,1);
+  resultado.setFraccion(0, f);
+
   return resultado;
-}
+}*/
