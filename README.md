@@ -1,4 +1,4 @@
-# Actividad-colaborativa-Polimorfismo
+# C++ | Polimorfism
 José Ángel Tobón Salazar
 Miguel Ángel Bermea Rodríguez
 Gustavo Luna Muñoz
